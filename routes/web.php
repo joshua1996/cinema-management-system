@@ -26,10 +26,10 @@ Route::post('/sessionGetTime', 'mainController@sessionGetTime');
 Route::post('/buyTicket', 'mainController@buyTicket');
 Route::get('/Ticketing/selectSeats/{id}', 'mainController@redirectToBuyTicket');
 Route::post('/buySeat', 'mainController@buySeat');
-Route::get('/movie/now-showing', 'mainController@movieList');
-Route::get('/movie/coming-soon', 'mainController@comingSoon');
+Route::get('/movie/now-showing', 'mainController@movieList')->name('nowshowing');
+Route::get('/movie/coming-soon', 'mainController@comingSoon')->name('comingsoon');
 Route::get('/movie/{movie}', 'mainController@movie');
-Route::get('/Ticketing/Confirm', 'mainController@confirm');
+Route::get('/Ticketing/Confirm/{userid}', 'mainController@confirm');
 Route::get('/terms-conditions', function () {
 	return view('terms-conditions');
 });

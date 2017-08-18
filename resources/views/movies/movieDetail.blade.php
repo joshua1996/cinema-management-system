@@ -1,10 +1,40 @@
 @extends('master') @section('head')
 <link rel="stylesheet" type="text/css" href="{{ URL::to('/css/movie-synopsis-v1-b-a8dfe4f789.css') }}"> @endsection @section('sidebar')
+    <style>
+        .btna {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
 
+        .btna > .fill {
+            fill: #fff;
+            opacity: 0.3;
+        }
+
+        .btna > .outline {
+            stroke: #fff;
+            stroke-width: 3;
+            opacity: 1;
+        }
+
+        .btna > .triangle {
+            fill: #fff;
+        }
+
+    </style>
 <div class="banner-main synopsis-banner">
     <!--  <img src="/img/hp_showcase/antman.jpg" alt="Ant Man" class="__bg"> -->
     <div id="imgBanner" style="background-image:url('/img/movie/banner/{!!$movie['movieBanner']!!}')" class="cover-image"></div>
     <div class="__player-btn __play">
+        <a href="/media/{{ $movie['trailer'] }}" class="html5lightbox" data-width="1000"  title="{!!$movie['name']!!}">
+            <svg class="btna">
+
+                <circle class="fill" stroke=none cx="40" cy="40" r="37.5" />
+                <circle class="outline" fill=none cx="40" cy="40" r="37.5" />
+                <polygon class="triangle" stroke=none points="28,20.4 62,40 28,59.6 " />
+            </svg>
+        </a>
 
     </div>
     <div class="__overlay"></div>
@@ -57,7 +87,7 @@
 
             </div>
 
-            <div class="summary-reviews">
+            <div class="summary-reviews" style="margin-top: 30px;">
                 <div class="tabs">
                     <span class="__tab _active" id="summary">Summary</span>
 
@@ -67,37 +97,37 @@
                     <div class="synopsis">
                         <blockquote cite="http://in.bookmyshow.com/movies/brindhaavanam/ET00057481">{!!$movie['synopsis']!!}</blockquote>
                     </div>
-                    <div class="cast" id="cast">
-                        <div class="__heading">LEAD CAST</div>
-                        <div class="cast-members showcase" id="cast-carousel">
-                            <div class="showcase-carousel slick-initialized slick-slider">
+                    {{--<div class="cast" id="cast">--}}
+                        {{--<div class="__heading">LEAD CAST</div>--}}
+                        {{--<div class="cast-members showcase" id="cast-carousel">--}}
+                            {{--<div class="showcase-carousel slick-initialized slick-slider">--}}
 
-                                <div aria-live="polite" class="slick-list draggable">
-                                    <div class="slick-track" style="opacity: 1; width: 996px; transform: translate3d(0px, 0px, 0px);"><span itemprop="actor" itemscope="" itemtype="http://schema.org/Person" class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 164px;"><a class="member-name banner-container" itemprop="url" href="/person/arulnithi-tamilarasu/1043910"><div class="__cast-member" itemprop="name" content="Arulnithi Tamilarasu"><div class="__cast-image wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><meta itemprop="image" content="https://in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg"><img alt="Arulnithi Tamilarasu" title="Arulnithi Tamilarasu" data-error="//in.bmscdn.com/webin/profile/user.jpg" class="slick-loading" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg"></div><br>Arulnithi Tamilarasu</div></a></span></div>
-                                </div>
+                                {{--<div aria-live="polite" class="slick-list draggable">--}}
+                                    {{--<div class="slick-track" style="opacity: 1; width: 996px; transform: translate3d(0px, 0px, 0px);"><span itemprop="actor" itemscope="" itemtype="http://schema.org/Person" class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 164px;"><a class="member-name banner-container" itemprop="url" href="/person/arulnithi-tamilarasu/1043910"><div class="__cast-member" itemprop="name" content="Arulnithi Tamilarasu"><div class="__cast-image wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><meta itemprop="image" content="https://in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg"><img alt="Arulnithi Tamilarasu" title="Arulnithi Tamilarasu" data-error="//in.bmscdn.com/webin/profile/user.jpg" class="slick-loading" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg"></div><br>Arulnithi Tamilarasu</div></a></span></div>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cast" id="crew">
-                        <div class="__heading">CREW</div>
-                        <div class="cast-members showcase" id="crew-carousel">
-                            <div class="showcase-carousel slick-initialized slick-slider">
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="cast" id="crew">--}}
+                        {{--<div class="__heading">CREW</div>--}}
+                        {{--<div class="cast-members showcase" id="crew-carousel">--}}
+                            {{--<div class="showcase-carousel slick-initialized slick-slider">--}}
 
-                                <div aria-live="polite" class="slick-list draggable">
-                                    <div class="slick-track" style="opacity: 1; width: 1494px; transform: translate3d(0px, 0px, 0px);"><span itemprop="director" itemscope="" itemtype="http://schema.org/Person" class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 164px;"><a class="member-name banner-container" itemprop="url" href="/person/radha-mohan/1758"><div class="__cast-member" itemprop="name" content="Radha Mohan"><div class="__cast-image wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><meta itemprop="image" content="https://in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg"><img alt="Radha Mohan" title="Radha Mohan" data-error="//in.bmscdn.com/webin/profile/user.jpg" class="slick-loading" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg"></div><br>Radha Mohan<br><span class="__role">Director, Writer, Screenplay</span></div>
-                                    </a>
-                                    </span>
-                                </div>
-                            </div>
+                                {{--<div aria-live="polite" class="slick-list draggable">--}}
+                                    {{--<div class="slick-track" style="opacity: 1; width: 1494px; transform: translate3d(0px, 0px, 0px);"><span itemprop="director" itemscope="" itemtype="http://schema.org/Person" class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 164px;"><a class="member-name banner-container" itemprop="url" href="/person/radha-mohan/1758"><div class="__cast-member" itemprop="name" content="Radha Mohan"><div class="__cast-image wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><meta itemprop="image" content="https://in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg"><img alt="Radha Mohan" title="Radha Mohan" data-error="//in.bmscdn.com/webin/profile/user.jpg" class="slick-loading" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg"></div><br>Radha Mohan<br><span class="__role">Director, Writer, Screenplay</span></div>--}}
+                                    {{--</a>--}}
+                                    {{--</span>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                        </div>
-                    </div>
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </div>
     </div>
-    <div class="sidebar">
+    <div class="sidebar" style="float: right;">
 
         <div class="right-content">
             <div class="new-ad-spot-syn">

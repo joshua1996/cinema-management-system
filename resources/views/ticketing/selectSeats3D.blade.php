@@ -11,9 +11,11 @@
 		<meta name="author" content="Codrops" />
 
 		<script src="{{ URL::to('/js/jquery-3.1.1.js')}}"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.21.1/mediaelement-and-player.js"></script>
 		<link rel="stylesheet" type="text/css" href="{{URL::to('/css/normalize.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{URL::to('css/demo.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{URL::to('/css/component.css')}}" />
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('/css/mediaelementplayer.css') }}">
 		<script src="{{URL::to('js/modernizr-custom.js')}}"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -57,11 +59,12 @@
 				<div class="cube__side cube__side--back">
 					<div class="screen">
 						<div class="video">
-							<video class="video-player" src="{{URL::to('/media/sintel.mp4')}}" preload="auto" poster="{{URL::to('/media/sintel.jpg')}}">
+							<video class="video-player" src="{{URL::to('/media/')}}/{{ $showing[0]->trailer }}" preload="auto" poster="{{URL::to('/media')}}/{{ $showing[0]->trailerImg }}">
 								<source src="{{URL::to('/media/sintel.ogg')}}" type='video/ogg; codecs="theora, vorbis"'>
 								<source src="{{URL::to('/media/sintel.mp4')}}" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
 								<p>Sorry, but your browser does not support this video format.</p>
 							</video>
+
 							<button class="action action--play action--shown" aria-label="Play Video"></button>
 						</div>
 						<div class="intro intro--shown">
@@ -828,6 +831,8 @@
 		<script src="{{URL::to('/js/main.js')}}"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
+
+                console.log('{!!$hallseat!!}');
 				$('.action--buy').on('click', function(){
 					if (seatArr.length === 0) {
 						alert('please select a seat');
@@ -835,7 +840,7 @@
 						seatArr.sort();
 						var data = {
 							seat : seatArr,
-							showingID: '{!!$showing[0]->sid!!}'
+							showingID: '{!!$showing[0]->showingshowingID!!}'
 						}
 						console.log(data);
 						$.ajax({
@@ -847,14 +852,14 @@
 								if (data == 'sold') {
 									alert('Sorry, those seats were sold while you were choosing. Please re-select.');
 								}else {
-									window.location.href = '{{ URL::to('/Ticketing/Confirm') }}';
+									window.location.href = "{{ URL::to('/Ticketing/Confirm') }}/" + data ;
 								}
 							}
 						});
 					}
 				});
 
-				$.each({!!$showing!!}, function(index, value){
+				$.each({!!$hallseat!!}, function(index, value){
 						$('[data-tooltip="'+value.seat+'"]').addClass('row__seat row__seat--reserved');
 				});
 			});

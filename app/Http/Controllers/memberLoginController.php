@@ -17,7 +17,12 @@ class memberLoginController extends Controller {
 	}
 
 	public function checklogin(){
-		return \Response::json(['status' => Auth::guard('member')]);
+        if (Auth::guard('member')->check()) {
+            return \Response::json(['status' =>true]);
+        } else {
+            return \Response::json(['status' =>false]);
+        }
+
 	}
 
 }

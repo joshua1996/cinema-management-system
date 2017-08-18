@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => 'ssl://smtp.gmail.com',//env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => '465',//env('MAIL_PORT', 587),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => 'kjw1996@hotmail.com',//env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => 'My Cinema',//env('MAIL_FROM_NAME', 'Example'),
     ],
 
     /*
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => 'joshua960930@gmail.com',//nv('MAIL_USERNAME'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => 'kjw0175629659',//env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------

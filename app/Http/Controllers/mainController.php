@@ -8,9 +8,12 @@ use App\movieModel;
 use App\showingModel;
 use App\foodDrinkModel;
 use App\foodDrinkComboModel;
+use App\moviePosterModel;
 use Carbon\Carbon;
 use Cookie;
+use App\Mail\OrderShipped;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class mainController extends Controller {
 	private $_apiContext;
@@ -21,11 +24,11 @@ class mainController extends Controller {
 	}
 
 	public function index(Request $request) {
-		if ($request->cookie('userid') != null) {
-			$hallseat = new hallSeatModel();
-			$hallseat->where('userid', '=', $request->cookie('userid'))
-				->delete();
-		}
+//		if ($request->cookie('userid') != null) {
+//			$hallseat = new hallSeatModel();
+//			$hallseat->where('userid', '=', $request->cookie('userid'))
+//				->delete();
+//		}
 		$movie = new movieModel;
 		$cinema = new cinemaModel();
 		$showing = new showingModel();
@@ -36,7 +39,8 @@ class mainController extends Controller {
 			->groupBy('movie.movieID')->get(['movie.name', 'cinema.cinema', 'movie.movieID', 'showing.cinemaID']);
 		$movieResult = $movie->get();
 
-		return view('index', ['c' => $movieResult, 'showing' => $showingResult]);
+		//return view('index', ['c' => $movieResult, 'showing' => $showingResult]);
+        return redirect()->route('nowshowing');
 	}
 
 	public function movieGetCinema(Request $request) {
@@ -84,25 +88,34 @@ class mainController extends Controller {
 
 	public function redirectToBuyTicket($id) {
 		$showing = new showingModel();
-		$showingResult = $showing->where('showing.ID', '=', $id)
+		$hallseat = new hallSeatModel();
+		$showingResult = $showing->where('showing.showingID', '=', $id)
 			->join('cinema', 'showing.cinemaID', '=', 'cinema.cinemaID')
 			->join('movie', 'showing.movieID', '=', 'movie.movieID')
 			->leftjoin('hallseat', 'showing.showingID', '=', 'hallseat.showingID')
 			->get(['cinema.cinemaID as cci', 'cinema.*', 'showing.ID as sid', 'showing.showingID as showingshowingID', 'showing.*', 'movie.movieID as mid', 'movie.name as moviename', 'movie.*', 'hallseat.*']);
 		//echo $showingResult;
+        $hallseatR = $hallseat
+          //  ->join('showing', 'hallseat.showingID', '=', 'showing.showingID')
+            ->where('showingID', '=', $id)
+            ->where('seatStatus', '=', '1')
+            ->get(['seat']);
 		if ($showingResult[0]->end < date('Y-m-d')) {
 			return $showingResult->movieID;
 		} else {
-			return view('ticketing.selectSeats3D', ['showing' => $showingResult]);
+			return view('ticketing.selectSeats3D', ['showing' => $showingResult, 'hallseat' => $hallseatR]);
 		}
 	}
 
 	public function buySeat(Request $request) {
 		$hallseat = new hallSeatModel();
 		$showing = new showingModel();
-		$time = time();
+		$time = uniqid();
 		$ticketTime = Carbon::now();
-		$hallseatResult = $hallseat->whereIn('seat', $request->input('seat'))->get();
+		$hallseatResult = $hallseat->whereIn('seat', $request->input('seat'))
+            ->where('seatStatus', '=', '1')
+            ->where('showingID', '=', $request->input('showingID'))
+            ->get();
 		if ($hallseatResult->count() > 0) {
 			return 'sold';
 		} else {
@@ -111,28 +124,29 @@ class mainController extends Controller {
 					'seat' => $value,
 					'ticketTime' => $time,
 					'userid' => $time,
-					'showingID' => $request->input('showingID'),
+					'showingID' => $request->input('showingID')
 				]);
 			}
 			Cookie::queue('userid', $time, 10);
-			return '';
+			return $time;
 		}
 	}
 
-	public function confirm() {
+	public function confirm(Request $r) {
 		$hallseat = new hallSeatModel();
 		$foodDrinkCombo = new foodDrinkComboModel();
 		$userid = Cookie::get('userid');
-		$time = time();
+		$time = Cookie::get('userid');
 		if (is_null($userid)) {
 			return 'gg';
 		} else {
 			Cookie::queue('userid', $time, 10);
-			$hallseat->where('userid', $userid)->update(['userid' => $time]);
-			$hallseatResult = $hallseat->where('userid', '=', $time)
-				->join('showing', 'hallseat.showingID', '=', 'showing.ID')
+			$hallseat->where('userid', '=', $userid)->update(['userid' => $time]);
+			$hallseatResult = $hallseat
+				->join('showing', 'hallseat.showingID', '=', 'showing.showingID')
 				->join('movie', 'showing.movieID', '=', 'movie.movieID')
 				->join('cinema', 'showing.cinemaID', '=', 'cinema.cinemaID')
+                ->where('userid', '=', $r->userid)
 				->get();
 			session(['userid' => $time]);
 			$foodDrinkComboR = $foodDrinkCombo->all();
@@ -166,8 +180,12 @@ class mainController extends Controller {
 				->join('movie', 'showing.movieID', '=', 'movie.movieID')
 				->groupBy('movie.movieID')
 				->get(['movie.*', 'showing.*']);
+        $moviePoster = new moviePosterModel();
+        $moviePosterR = $moviePoster->get();
 
-			return view('movies.now-showing', ['showing' => $showingResult]);
+//        Mail::to('kjw1996@hotmail.com')
+//            ->send(new OrderShipped($moviePosterR));
+			return view('movies.now-showing', ['showing' => $showingResult, 'moviePoster' => $moviePosterR]);
 	}
 
 	public function movie(Request $r) {

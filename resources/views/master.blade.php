@@ -12,6 +12,7 @@
     <script type="text/javascript" src="{{ URL::to('/js/jquery-dateFormat.js') }}"></script>
     <script type="text/javascript" src="{{ URL::to('/js/prettydate.js') }}"></script>
     <script type="text/javascript" src="{{ URL::to('/js/jquery.bxslider.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::to('/js/html5lightbox.js') }}"></script>
 
     <link rel="stylesheet" type="text/css" href="{{ URL::to('/css/movies-5178d9b695.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::to('/css/jquery.bxslider.css') }}">
@@ -156,7 +157,7 @@
                         @else
                        <li class="login _logged">
                       <a data-nav-menu="Profile" data-group="top-nav" id="preSignIn" style="display: none;" class="signin" data-modal="signinPopup" href="javascript:;">SIGN IN</a>
-                                              <a data-nav-menu="Profile" data-group="top-nav" id="postSignIn" href="javascript:;" onclick="" style="display: block;" class="user-img"><img id="loggedInImg" src="{!!Auth::guard('member')->user()->profile !!}" alt="User image"></a>
+                                              <a data-nav-menu="Profile" data-group="top-nav" id="postSignIn" href="javascript:;" onclick="" style="display: block;" class="user-img"><img id="loggedInImg" src="/img/default-user.png" alt="User image"></a>
                       
 
                                           <div class="signed-in nav-tip" data-role="dHeaderDD" data-id="postSignIn" style="display: none;">
@@ -260,45 +261,15 @@
                 <!-- Secondary nav -->
                 <div class="secondary  desktop-nav">
                     <div>
-                        <div class="brand">
+                        <div class="brand" style="display: block;">
                             <a class="logo" title="BookMyShow" href="http://in.bookmyshow.com/">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                    <use xlink:href="/icons/common-icons.svg#icon-bms-logo"></use>
-                                </svg>
+                                <img src="/img/UA_Cinemas_logo.svg.png" alt="" height="50px">
                             </a>
                         </div>
 
                         <!-- For testing - will be cleaned before going live -->
                         <!-- https://www.loc.gov/standards/iso639-2/php/code_list.php -->
-                        <div id="dLangWrap" class="__brand-Langdropdown" data-belongs-to="language" hidden="" style="display: block;">
-                            <div class="__filter">
-                                <div class="SumoSelect">
-                                    <p class="CaptionCont SlectBox" onclick="BMS.Header.switchLangDropDown();"><span class="_active">English</span>
-                                        <label><i class="downChevron"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" enable-background="new 0 0 100 100" xml:space="preserve"><use xlink:href="/icons/common-icons.svg#icon-arrow-down-new"></use></svg></i></label>
-                                    </p>
 
-                                    <div class="optWrapper">
-                                        <ul class="options">
-                                            <li data-val="eng" data-name="English" class="selected" style="display: none;">
-                                                <label>English</label>
-                                            </li>
-                                            <li data-val="hin" data-name="Hindi">
-                                                <label>हिंदी</label>
-                                            </li>
-                                            <li data-val="tam" data-name="Tamil">
-                                                <label>தமிழ்</label>
-                                            </li>
-                                            <li data-val="tel" data-name="Telugu">
-                                                <label>తెలుగు</label>
-                                            </li>
-                                            <li data-val="kan" data-name="Kannada">
-                                                <label>ಕನ್ನಡ</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="__brand-promo">
 
                             <!--  <a href="/sports/indian-cricket/t20-premier-league"> -->
@@ -316,7 +287,7 @@
 
         @section('sidebar') 这是 master 的侧边栏。 @show
     </div>
-    @section('showtimes') ss @show {{--
+    @section('showtimes') @show {{--
     <div class="row">
         <div class="col-4">
             <p>
@@ -461,7 +432,7 @@
             <div class="popover-container">
                 <div class="__header">
                     SIGN UP
-                    <span class="__dismiss">
+                    <span class="__dismiss">X
         </span>
                 </div>
                 <div class="body">
@@ -1528,6 +1499,7 @@
                 $('.main-body-wrapper').toggleClass('_make-blur');
                 $('.__overlay').css('display', 'none');
                 $('#signinPopup').css('display', 'none');
+                $('#signupPopup').css('display', 'none');
             });
 
           $("a[data-modal='signupPopup']").on('click', function(){
@@ -1540,6 +1512,16 @@
             $('#signupPopup').css('display', 'none');
            // $('#signupPopup').css('top', '199.5px');
           });
+
+            $("#dTopRgnDD").on('click', function(){
+                $('body').toggleClass('_fixed');
+                $('.main-body-wrapper').toggleClass('_make-blur');
+                $('.__overlay').css('display', 'block');
+                $('#signinPopup').css('display', 'none');
+                $('#signupPopup').css('display', 'block');
+                $('#signupPopup').css('top', '199.5px');
+            });
+
 
           $('.login._logged').on('click', function(){
             if ($('.signed-in.nav-tip').css('display') == 'none') {

@@ -471,7 +471,7 @@
                         <a id="btnseatdisab" href="javascript:;" class="btn _disable" style="display: none;">Please wait...</a>
 
                         <a id="prePay" class="btn _cuatro __fnb-btn" href="#" style="display: inline-block;"><span class="__totalinbtn" style="display: inline;">TOTAL: <span id="PayTotal">RM {!!number_format($price + $hallseat[0]['bookingFee'], 2)!!}</span></span>Proceed</a>
-                        <a id="payLat" class="btn _cuatro" style="display:none;" onclick="fnBookTrans();" href="javascript:;">Confirm Reservation</a>
+                        <a id="payLat" class="btn _cuatro" style="display:none;" onclick="fnBookTrans();" href="javascript:;">Please Login First!</a>
                     </div>
                 </div>
             </div>
@@ -518,7 +518,7 @@
 
             $('#prePay').on('click', function(){
                 $.get('/checklogin', function(data){
-                   // data.status == false ? $('#payLat').show() : goToPay();
+                    data.status == false ? $('#payLat').show() : goToPay();
                 })
             });
             //
@@ -583,7 +583,7 @@
             }
            // $.post('/getCheckout', data);
            $.ajax({
-                   url: '/getCheckout',
+                   url: '/getCheckout/{{  Request::get('userid') }}',
                    type: 'post',
                    data: data,
                    success: function (data) {

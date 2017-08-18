@@ -70,67 +70,67 @@
                       <a class="__moreinfo" href="/chennai/movies/brindhaavanam/ET00057481"><span><span class="info-icon __icon"><svg xml:space="preserve" enable-background="new 0 0 100 100" viewBox="0 0 100 100" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="/icons/movies-icons.svg#icon-info"></use></svg></span></span>INFO</a>
                     </div>
 
-                    <div class="st-movie-info">
-                    
-                        <div class="__director-info">
-                          <div class="__title">DIRECTOR</div>
-                            <span class="__director-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                              <span class="__dir-img">
-                                <span class="__cast-img">
-                                  <a class="_anchor-person" href="/person/radha-mohan/1758">
-                                  <img alt="Radha Mohan" title="Radha Mohan" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg"></a>
-                                </span>
+                    {{--<div class="st-movie-info">--}}
+                    {{----}}
+                        {{--<div class="__director-info">--}}
+                          {{--<div class="__title">DIRECTOR</div>--}}
+                            {{--<span class="__director-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">--}}
+                              {{--<span class="__dir-img">--}}
+                                {{--<span class="__cast-img">--}}
+                                  {{--<a class="_anchor-person" href="/person/radha-mohan/1758">--}}
+                                  {{--<img alt="Radha Mohan" title="Radha Mohan" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/radha-mohan-1758-24-03-2017-17-35-08.jpg"></a>--}}
+                                {{--</span>--}}
 
-                              </span>
-                              <br>
-                               <a class="_anchor-person" href="/person/radha-mohan/1758">
-                              <span class="__dir-name">Radha Mohan</span></a>
-                            </span>
-                        </div>
-                                              <div class="__crew-info">
-                        <div class="__title">CAST &amp; CREW</div>
-                                                <span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                              {{--</span>--}}
+                              {{--<br>--}}
+                               {{--<a class="_anchor-person" href="/person/radha-mohan/1758">--}}
+                              {{--<span class="__dir-name">Radha Mohan</span></a>--}}
+                            {{--</span>--}}
+                        {{--</div>--}}
+                                              {{--<div class="__crew-info">--}}
+                        {{--<div class="__title">CAST &amp; CREW</div>--}}
+                                                {{--<span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">--}}
 
-                            <span class="__cast-img">
-                            <a class="_anchor-person" href="/person/arulnithi-tamilarasu/1043910">
-                              <img alt="Arulnithi Tamilarasu" title="Arulnithi Tamilarasu" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg"></a>
-                            </span>
-                            <br>
-                            <a class="_anchor-person" href="/person/arulnithi-tamilarasu/1043910">
-                            <span class="__cast-name">Arulnithi Tamilarasu</span></a>
-                          </span>
-                                                <span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            {{--<span class="__cast-img">--}}
+                            {{--<a class="_anchor-person" href="/person/arulnithi-tamilarasu/1043910">--}}
+                              {{--<img alt="Arulnithi Tamilarasu" title="Arulnithi Tamilarasu" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/arulnithi-tamilarasu-1043910-24-03-2017-17-48-52.jpg"></a>--}}
+                            {{--</span>--}}
+                            {{--<br>--}}
+                            {{--<a class="_anchor-person" href="/person/arulnithi-tamilarasu/1043910">--}}
+                            {{--<span class="__cast-name">Arulnithi Tamilarasu</span></a>--}}
+                          {{--</span>--}}
+                                                {{--<span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">--}}
 
-                            <span class="__cast-img">
-                            <a class="_anchor-person" href="/person/tanya-ravichandran/1076845">
-                              <img alt="Tanya Ravichandran" title="Tanya Ravichandran" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/tanya-ravichandran-1076845-22-05-2017-15-04-10.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/tanya-ravichandran-1076845-22-05-2017-15-04-10.jpg"></a>
-                            </span>
-                            <br>
-                            <a class="_anchor-person" href="/person/tanya-ravichandran/1076845">
-                            <span class="__cast-name">Tanya Ravichandran</span></a>
-                          </span>
-                                                <span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            {{--<span class="__cast-img">--}}
+                            {{--<a class="_anchor-person" href="/person/tanya-ravichandran/1076845">--}}
+                              {{--<img alt="Tanya Ravichandran" title="Tanya Ravichandran" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/tanya-ravichandran-1076845-22-05-2017-15-04-10.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/tanya-ravichandran-1076845-22-05-2017-15-04-10.jpg"></a>--}}
+                            {{--</span>--}}
+                            {{--<br>--}}
+                            {{--<a class="_anchor-person" href="/person/tanya-ravichandran/1076845">--}}
+                            {{--<span class="__cast-name">Tanya Ravichandran</span></a>--}}
+                          {{--</span>--}}
+                                                {{--<span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">--}}
 
-                            <span class="__cast-img">
-                            <a class="_anchor-person" href="/person/cell-murugan/IEIN083296">
-                              <img alt="Cell Murugan" title="Cell Murugan" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/cell-murugan-iein083296-22-05-2017-15-04-41.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/cell-murugan-iein083296-22-05-2017-15-04-41.jpg"></a>
-                            </span>
-                            <br>
-                            <a class="_anchor-person" href="/person/cell-murugan/IEIN083296">
-                            <span class="__cast-name">Cell Murugan</span></a>
-                          </span>
-                                                <span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            {{--<span class="__cast-img">--}}
+                            {{--<a class="_anchor-person" href="/person/cell-murugan/IEIN083296">--}}
+                              {{--<img alt="Cell Murugan" title="Cell Murugan" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/cell-murugan-iein083296-22-05-2017-15-04-41.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/cell-murugan-iein083296-22-05-2017-15-04-41.jpg"></a>--}}
+                            {{--</span>--}}
+                            {{--<br>--}}
+                            {{--<a class="_anchor-person" href="/person/cell-murugan/IEIN083296">--}}
+                            {{--<span class="__cast-name">Cell Murugan</span></a>--}}
+                          {{--</span>--}}
+                                                {{--<span class="__cast-img-name wow fadeIn" style="visibility: visible; animation-name: fadeIn;">--}}
 
-                            <span class="__cast-img">
-                            <a class="_anchor-person" href="/person/m-s-bhaskar/18309">
-                              <img alt="M. S. Bhaskar" title="M. S. Bhaskar" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/ms-bhaskar-18309-24-03-2017-15-55-56.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/ms-bhaskar-18309-24-03-2017-15-55-56.jpg"></a>
-                            </span>
-                            <br>
-                            <a class="_anchor-person" href="/person/m-s-bhaskar/18309">
-                            <span class="__cast-name">M. S. Bhaskar</span></a>
-                          </span>
-                                              </div>
-                                        </div>
+                            {{--<span class="__cast-img">--}}
+                            {{--<a class="_anchor-person" href="/person/m-s-bhaskar/18309">--}}
+                              {{--<img alt="M. S. Bhaskar" title="M. S. Bhaskar" data-error="//in.bmscdn.com/webin/profile/user.jpg" data-src="//in.bmscdn.com/iedb/artist/images/website/poster/large/ms-bhaskar-18309-24-03-2017-15-55-56.jpg" src="//in.bmscdn.com/iedb/artist/images/website/poster/large/ms-bhaskar-18309-24-03-2017-15-55-56.jpg"></a>--}}
+                            {{--</span>--}}
+                            {{--<br>--}}
+                            {{--<a class="_anchor-person" href="/person/m-s-bhaskar/18309">--}}
+                            {{--<span class="__cast-name">M. S. Bhaskar</span></a>--}}
+                          {{--</span>--}}
+                                              {{--</div>--}}
+                                        {{--</div>--}}
 
                     <meta itemprop="name" content="Brindhaavanam">
                     <h1>
@@ -232,139 +232,12 @@
                     <button class="btn _default __reset">RESET</button>
                     <button class="btn _tres __done">DONE</button>
 
-                                                            <div class="dropdown highlighted _disabled">
-                      <div class="__text _languages-text _highlighted">Tamil - 2D</div>
-                      <i class="__icon icon-arrow-down " style="">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                          <use xlink:href="/icons/common-icons.svg#icon-arrow-down-new"></use>
-                        </svg>
-                      </i>
-                      <ul class="__menu" id="filterLanguage" data-type="_highlighted languages">
-                                                <li class="languages" data-value="Tamil-2D">
-                          <a href="/buytickets/brindhaavanam-chennai/movie-chen-ET00057481-MT/20170529">
-                            <label>Tamil - 2D</label>
-                            <div class="mini-loader">
-                              <div class="mini"></div>
-                              <div></div>
-                            </div>
-                          </a>
-                        </li>
-                                              </ul>
-                    </div>
+
                     
                                         
-                                        <div class="dropdown filter" data-type="prices">
-                          <div class="__text _prices-text" data-placeholder="Filter Price Range">Filter Price Range</div>
-                          <i class="__icon icon-arrow-down">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                          <use xlink:href="/icons/common-icons.svg#icon-arrow-down-new"></use>
-                        </svg>
-                      </i>
-                          <ul class="__menu" id="filterPrice" data-type="prices">
-                                                              <li class="prices" data-range="10-100" data-value="0">
-                                <input type="checkbox" id="filter-10-100" class="" value="0">
-                                <label for="filter-10-100">
-                                    <span class="__tick">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/common-icons.svg#icon-tick"></use>
-                                </svg>
-                              </span>
-                              Rs. 10-100                            </label>
-                                <div class="mini-loader">
-                                    <div class="mini"></div>
-                                  </div>
-                            </li>
-                                                              <li class="prices" data-range="101-200" data-value="1">
-                                <input type="checkbox" id="filter-101-200" class="" value="1">
-                                <label for="filter-101-200">
-                                    <span class="__tick">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/common-icons.svg#icon-tick"></use>
-                                </svg>
-                              </span>
-                              Rs. 101-200                           </label>
-                                <div class="mini-loader">
-                                    <div class="mini"></div>
-                                  </div>
-                            </li>
-                                                              <li class="prices" data-range="201-300" data-value="2">
-                                <input type="checkbox" id="filter-201-300" class="" value="2">
-                                <label for="filter-201-300">
-                                    <span class="__tick">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/common-icons.svg#icon-tick"></use>
-                                </svg>
-                              </span>
-                              Rs. 201-300                           </label>
-                                <div class="mini-loader">
-                                    <div class="mini"></div>
-                                  </div>
-                            </li>
-                                                        </ul>
-                      </div>
 
-                                            <div class="dropdown filter" data-type="showtimes">
-                          <div class="__text _prices-text" data-placeholder="Filter Show Timings">Filter Show Timings</div>
-                          <i class="__icon icon-arrow-down">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                          <use xlink:href="/icons/common-icons.svg#icon-arrow-down-new"></use>
-                        </svg>
-                      </i>
-                          <ul class="__menu" id="" data-type="showtimes">
-                                                              <li class="" data-value="morning" data-range="00:00-11:59">
-                                <input type="checkbox" id="filter-morning" class="" value="morning">
-                                <label for="filter-morning">
-                                    <span class="__tick">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/common-icons.svg#icon-tick"></use>
-                                </svg>
-                              </span>
-                              Morning <small class="__count"><span>12:00-11:59 AM</span><svg xml:space="preserve" enable-background="new 0 0 100 100" viewBox="0 0 100 100" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="/icons/buytickets-icons.svg#icon-morning"></use></svg></small>                           </label>
-                                <div class="mini-loader">
-                                    <div class="mini"></div>
-                                  </div>
-                            </li>
-                                                              <li class="" data-value="afternoon" data-range="12:00-15:59">
-                                <input type="checkbox" id="filter-afternoon" class="" value="afternoon">
-                                <label for="filter-afternoon">
-                                    <span class="__tick">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/common-icons.svg#icon-tick"></use>
-                                </svg>
-                              </span>
-                              Afternoon <small class="__count"><span>12:00-3:59 PM</span><svg xml:space="preserve" enable-background="new 0 0 100 100" viewBox="0 0 100 100" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="/icons/buytickets-icons.svg#icon-afternoon"></use></svg></small>                            </label>
-                                <div class="mini-loader">
-                                    <div class="mini"></div>
-                                  </div>
-                            </li>
-                                                              <li class="" data-value="evening" data-range="16:00-18:59">
-                                <input type="checkbox" id="filter-evening" class="" value="evening">
-                                <label for="filter-evening">
-                                    <span class="__tick">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/common-icons.svg#icon-tick"></use>
-                                </svg>
-                              </span>
-                              Evening <small class="__count"><span>4:00-6:59 PM</span><svg xml:space="preserve" enable-background="new 0 0 100 100" viewBox="0 0 100 100" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="/icons/buytickets-icons.svg#icon-evening"></use></svg></small>                           </label>
-                                <div class="mini-loader">
-                                    <div class="mini"></div>
-                                  </div>
-                            </li>
-                                                              <li class="" data-value="night" data-range="19:00-23:59">
-                                <input type="checkbox" id="filter-night" class="" value="night">
-                                <label for="filter-night">
-                                    <span class="__tick">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/common-icons.svg#icon-tick"></use>
-                                </svg>
-                              </span>
-                              Night <small class="__count"><span>7:00-11:59 PM</span><svg xml:space="preserve" enable-background="new 0 0 100 100" viewBox="0 0 100 100" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="/icons/buytickets-icons.svg#icon-night"></use></svg></small>                            </label>
-                                <div class="mini-loader">
-                                    <div class="mini"></div>
-                                  </div>
-                            </li>
-                                                        </ul>
-                      </div>
+
+
 
                   </div>
 
@@ -453,25 +326,7 @@
                               </span>
                               <span class="__distance"></span>
                     </div>
-                    <div class="unpaid-mticket-wrapper">
 
-                                                                    <div class="__mticket-info">
-                          <span class="icon">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                    <use xlink:href="/icons/buytickets-icons.svg#icon-mobile"></use>
-                                  </svg>
-                          </span>
-                          <label>M-Ticket</label>
-                        </div>
-                                                                  <div class="__fnb-info">
-                        <span class="icon">
-                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                  <use xlink:href="/icons/buytickets-icons.svg#icon-fnb"></use>
-                                </svg>
-                        </span>
-                          <label>F&amp;B</label>
-                      </div>
-                                          </div>
                   </div>
                                     <address class="__address">
                                      
@@ -491,7 +346,7 @@
                                  
                                   @if (strtotime($value1['time']) > strtotime(date('H:i:s')))
                                      <div data-online="Y">
-                                  <a class="__showtime-link  time_vrcenter " href="/Ticketing/selectSeats/{!!$value1['ID']!!}">{!!$value1['time']!!}</a>
+                                  <a class="__showtime-link  time_vrcenter " href="/Ticketing/selectSeats/{!!$value1['showingID']!!}">{!!$value1['time']!!}</a>
                                   </div>
                                     @else
                                     <div data-online="N" class="_sold _past"><a>{!!$value1['time']!!}</a></div>

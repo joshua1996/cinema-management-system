@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\hallSeatModel;
 use Paypal;
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 
 class payPalController extends Controller {
@@ -31,14 +33,14 @@ class payPalController extends Controller {
 			->update([
 				'email' => $r->input('email'),
 			]);
-
+		session(['email' => $r->input('email')]);
 		//  session(['userid' => $r->userid]);
 		//  $hallseat = new hallSeatModel();
 		$hallseatResult = $hallseat->where('userid', '=', session('userid'))
-			->join('showing', 'hallseat.showingID', '=', 'showing.ID')
+			->join('showing', 'hallseat.showingID', '=', 'showing.showingID')
 			->join('movie', 'showing.movieID', '=', 'movie.movieID')
 			->get();
-		//echo $hallseatResult;
+		//echo session('userid');
 
 		$payer = PayPal::Payer();
 		$payer->setPaymentMethod('paypal');
@@ -79,6 +81,8 @@ class payPalController extends Controller {
 		$payment->setTransactions(array($transaction));
 
 		$response = $payment->create($this->_apiContext);
+
+
 		$redirectUrl = $response->links[1]->href;
 
 		//return Redirect::to($redirectUrl);
@@ -99,6 +103,10 @@ class payPalController extends Controller {
 		$hallseat = new hallSeatModel();
 		$hallseat->where('userid', '=', session('userid'))
 			->update(['seatStatus' => 1]);
+        $hallseatR = $hallseat->where('userid', '=', session('userid'))->get();
+        Mail::to(session('email'))
+            ->send(new OrderShipped($hallseatR));
+
 		return view('checkout.done', ['userid' => session('userid')]);
 	}
 

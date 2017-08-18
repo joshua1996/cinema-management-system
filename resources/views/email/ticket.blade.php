@@ -1,0 +1,1 @@
+Your Ticket ID is {{ $data[0]->userid }} !
