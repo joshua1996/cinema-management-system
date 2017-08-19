@@ -12,6 +12,12 @@ class memberLoginController extends Controller {
 	protected $redirectTo = '/';
 	use AuthenticatesUsers;
 
+    public function __construct()
+    {
+        $this->redirectTo = url()->previous();
+        $this->middleware('guest', ['except' => 'logout']);
+    }
+
 	protected function guard() {
 		return Auth::guard('member');
 	}
@@ -24,5 +30,7 @@ class memberLoginController extends Controller {
         }
 
 	}
+
+
 
 }

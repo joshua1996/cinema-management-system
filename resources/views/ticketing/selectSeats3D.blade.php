@@ -38,7 +38,7 @@
 					}
 					return time.join (''); // return adjusted time or original string
 				}
-				$('.time').html(tConvert('{!! $showing[0]->time !!}'));
+				{{--$('.time').html(tConvert('{!! $showing[0]->time !!}'));--}}
 			});
 		</script>
 	</head>
@@ -75,7 +75,7 @@
 							</p>
 							<p>{!!$showing[0]->address!!}</p>
 							<p>{!!$showing[0]->moviename!!}</p>
-							<p class="time"></p>
+							<p class="time"> {!! date('h:i a', strtotime($showing[0]->time)) !!}</p>
 							<p>Hall {!!$showing[0]->showingHall!!}</p>
 							</div>
 							<div class="intro__side">
@@ -837,6 +837,7 @@
 					if (seatArr.length === 0) {
 						alert('please select a seat');
 					}else {
+					    $(this).attr('disabled');
 						seatArr.sort();
 						var data = {
 							seat : seatArr,
@@ -848,7 +849,6 @@
 							url:'/buySeat',
 							data:data,
 							success:function(data){
-								console.log(data);
 								if (data == 'sold') {
 									alert('Sorry, those seats were sold while you were choosing. Please re-select.');
 								}else {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>应用程序名称 - @yield('title')</title>
+    <title>UA Cinemas</title>
     <script src="{{ URL::to('/js/jquery-3.1.1.js')}}"></script>
     <script src="{{ URL::to('/js/jquery.countdown.js') }}" charset="utf-8"></script>
     <script src="{{ URL::to('/js/jquery.slides.js') }}" charset="utf-8"></script>
@@ -157,7 +157,17 @@
                         @else
                        <li class="login _logged">
                       <a data-nav-menu="Profile" data-group="top-nav" id="preSignIn" style="display: none;" class="signin" data-modal="signinPopup" href="javascript:;">SIGN IN</a>
-                                              <a data-nav-menu="Profile" data-group="top-nav" id="postSignIn" href="javascript:;" onclick="" style="display: block;" class="user-img"><img id="loggedInImg" src="/img/default-user.png" alt="User image"></a>
+                                              <a data-nav-menu="Profile" data-group="top-nav" id="postSignIn" href="javascript:;" onclick="" style="display: block;" class="user-img"><img id="loggedInImg" src="@php
+
+                                                      if (Auth::guard('member')->user()->provider == '')
+                                                      {
+                                                           echo '/img/default-user.png';
+                                                      }else
+                                                  {
+                                                  echo Auth::guard('member')->user()->profile;
+                                                  }
+
+                                                          @endphp" alt="User image"></a>
                       
 
                                           <div class="signed-in nav-tip" data-role="dHeaderDD" data-id="postSignIn" style="display: none;">
@@ -262,7 +272,7 @@
                 <div class="secondary  desktop-nav">
                     <div>
                         <div class="brand" style="display: block;">
-                            <a class="logo" title="BookMyShow" href="http://in.bookmyshow.com/">
+                            <a class="logo" title="BookMyShow" href="{{ route('nowshowing') }}">
                                 <img src="/img/UA_Cinemas_logo.svg.png" alt="" height="50px">
                             </a>
                         </div>

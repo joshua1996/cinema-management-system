@@ -48,7 +48,7 @@ Route::get('cancel', [
 	'uses' => 'payPalController@getCancel',
 ]);
 Route::post('/getCheckout', 'payPalController@getCheckout')->name('getCheckout');
-Route::get('/showtimes/byMovie/{movieID}/{showingDate?}', 'mainController@byMovie');
+Route::get('/showtimes/byMovie/{movieID}/{showingDate?}', 'mainController@byMovie')->name('byMovie');
 Route::post('/filterCinemaGetMovie', 'mainController@filterCinemaGetMovie');
 Route::post('/filterRatingGetMovie', 'mainController@filterRatingGetMovie');
 Route::post('/filterLanguageGetMovie', 'mainController@filterLanguageGetMovie');
