@@ -43,7 +43,8 @@ class memberRegisterController extends Controller {
 			'name' => $data['fullname'],
 			'email' => $data['email'],
 			'password' => bcrypt($data['password']),
-            'loginID' => 'member'.uniqid()
+            'loginID' => 'member'.uniqid(),
+            'profile' => '/img/default-user.png'
 		]);
 	}
 

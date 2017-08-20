@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\hallSeatModel;
 use Paypal;
+use Auth;
 use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
@@ -102,7 +103,7 @@ class payPalController extends Controller {
 		//  $executePayment = $payment->execute($paymentExecution, $this->_apiContext);
 		$hallseat = new hallSeatModel();
 		$hallseat->where('userid', '=', session('userid'))
-			->update(['seatStatus' => 1]);
+			->update(['seatStatus' => 1, 'loginID' => Auth::guard('member')->user()->loginID, 'ticketTime' => date('Y-m-d H:i:s')]);
         $hallseatR = $hallseat->where('userid', '=', session('userid'))->get();
         Mail::to(session('email'))
             ->send(new OrderShipped($hallseatR));

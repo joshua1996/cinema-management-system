@@ -61,7 +61,7 @@ Route::post('/movie/now-showing/language', 'mainController@language');
 
 Route::get('/redirect', 'SocialAuthController@redirect')->name('facebookLogin');
 Route::get('/callback', 'SocialAuthController@callback');
-
+Route::get('/myprofile/booking-history', 'mainController@bookingHistory')->name('bookingHistory');
 //////////////////////admin////////////////////////////
 Route::get('/admin/movie/movie', 'adminController@getMovie')->name('getMovie');
 Route::group(['middleware'=>'checkAdmin'], function(){

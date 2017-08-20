@@ -157,17 +157,7 @@
                         @else
                        <li class="login _logged">
                       <a data-nav-menu="Profile" data-group="top-nav" id="preSignIn" style="display: none;" class="signin" data-modal="signinPopup" href="javascript:;">SIGN IN</a>
-                                              <a data-nav-menu="Profile" data-group="top-nav" id="postSignIn" href="javascript:;" onclick="" style="display: block;" class="user-img"><img id="loggedInImg" src="@php
-
-                                                      if (Auth::guard('member')->user()->provider == '')
-                                                      {
-                                                           echo '/img/default-user.png';
-                                                      }else
-                                                  {
-                                                  echo Auth::guard('member')->user()->profile;
-                                                  }
-
-                                                          @endphp" alt="User image"></a>
+                                              <a data-nav-menu="Profile" data-group="top-nav" id="postSignIn" href="javascript:;" onclick="" style="display: block;" class="user-img"><img id="loggedInImg" src="{{ Auth::guard('member')->user()->profile }}" alt="User image"></a>
                       
 
                                           <div class="signed-in nav-tip" data-role="dHeaderDD" data-id="postSignIn" style="display: none;">
@@ -207,7 +197,7 @@
                                   </a>
                                 </li> 
                                   <li>
-                                    <a href="/myprofile/booking-history">
+                                    <a href="{{ route('bookingHistory') }}">
                                       <span class="icon">
                                       <svg class="svg-booking" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
                                           <use xlink:href="/icons/common-icons.svg#icon-booking-history"></use>
